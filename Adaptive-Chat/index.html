@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+   
+    <!--
+        HW1: read - meta niewport
+        + add 2 rules:
+            zoom maxim/mim 100%
+    -->
+    <title>Chat App Layout</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+    <!-- 
+        HW*: recomandation
+        ! variables (color palette)
+        ! css units (vmin, vmax)
+        CSS units (vmin, vmax, variables (color pallete), dark&light) 
+        HW1: contact list ol or ul (arguments) 
+        Read about BEM methodology (classes)
+        Add class status - 5,10 min 
+        Add class message delivery status:seen, sent -->
+
+    <!--wrapper-->
+<body>
+<!--<div class="phone">-->
+    <section class="app">  
+        <header></header> 
+        <main>
+            <ul class="contacts">
+                <li> 
+                    <div class="contacts__profile status--online">
+                        <img src="img/avatar.png" alt="Avatars">
+                    </div>
+                    <div class="contact__message">
+                        <h2>Patric Venturini</h2>
+                        <p>Lorem ipsum dolor sit amet.</p>
+                    </div>
+                    <div class="messages_sent">
+                        <span class="message_read">
+                            <i class="fas fa-check-double"></i>10:30<br>
+                        </span> 
+                    </div> 
+                </li>
+
+                 <li> 
+                    <div class="contacts__profile status--out">
+                        <div class="status-time">2m</div>
+                        <img src="img/avataaars2.png" alt="Avatars">
+                    </div>
+                    <div class="contact__message">
+                        <h2>Thomas Brown</h2>
+                        <p>Lorem ipsum dolor sit amet.</p>
+                    </div>
+                    <div class="messages_sent">
+                        <span class="message-unread ">
+                            <i class="fas fa-check"></i>11:00<br>
+                        </span>    
+                    </div> 
+                </li>
+
+                <li> 
+                    <div class="contacts__profile status--online">
+                        <img src="img/avataaars1.png" alt="Avatars">
+                    </div>
+                    <div class="contact__message">
+                        <h2>Maria Felice</h2>
+                        <p> Lorem ipsum dolor sit amet.</p>
+                    </div>
+                    <div class="messages_sent">
+                        <span class="message_sent">
+                            <i class="fas fa-check-double"></i> 11:45<br>
+                    </span>
+                    </div> 
+                </li>
+
+                <li> 
+                    <div class="contacts__profile status--recently-active">
+                        <img src="img/avatar.png" alt="Avatars">
+                    </div>
+                    <div class="contact__message">
+                        <h2>Selena TK</h2>
+                        <p> Lorem ipsum dolor sit amet.</p>
+                    </div>
+                    <div class="messages_sent">
+                        <span class="message-unriad ">
+                            <i class="fas fa-check"></i> 15:30<br>
+                        </span>
+                    </div> 
+                    </li>
+
+                    <li> 
+                    <div class="contacts__profile status--out">
+                        <div class="status-time">5m</div>
+                        <img src="img/avataaars4.png" alt="Avatars">
+                    </div>
+                    <div class="contact__message">
+                        <h2>Zachary West</h2>
+                        <p> Lorem ipsum dolor sit amet.</p>
+                    </div>
+                    <div class="messages_sent">
+                        <span class="message_read"><i class="fas fa-check-double"></i> 09:30<br>
+                    </span>
+                    </div> 
+                </li>
+
+                <li> 
+                    <div class="contacts__profile status--recently-active">
+                        <img src="img/avatar.png" alt="Avatars">
+                    </div>
+                    <div class="contact__message">
+                        <h2>Matt Thompson</h2>
+                        <p> Lorem ipsum dolor sit amet.</p>
+                    </div>
+                        <div class="messages_sent">
+                            <span><i class="fas fa-check"></i> 20:20<br>
+                        </span>
+                    </div> 
+                </li>
+
+                <li> 
+                    <div class="contacts__profile status--online">
+                        <img src="img/avataaars3.png" alt="Avatars">
+                    </div>
+                    <div class="contact__message">
+                        <h2>Judith Dela Cruz</h2>
+                        <p> Lorem ipsum dolor sit amet.</p>
+                    </div>
+                    <div class="messages_sent">
+                        <span>
+                            <i class="fas fa-check"></i> 17:12<br>
+                        </span>
+                    </div> 
+                </li>
+
+                <li> 
+                    <div class="contacts__profile status--recently-active">
+                        <img src="img/avataaars1.png" alt="Avatars">
+                    </div>
+                    <div class="contact__message">
+                        <h2>Alexandra E Nolan</h2>
+                        <p> Lorem ipsum dolor sit amet.</p>
+                    </div>
+                    <div class="messages_sent">
+                        <span>
+                            <i class="fas fa-check"></i>21:20<br>
+                        </span>
+                    </div> 
+                </li>
+
+                <li> 
+                    <div class="contacts__profile status--offline">
+                        <img src="img/avataaars2.png" alt="Avatars">
+                    </div>
+                        
+                    <div class="contact__message">
+                        <h2>Marius Marius</h2>
+                        <p> Lorem ipsum dolor sit amet.</p>
+                    </div>
+                    <div class="messages_sent">
+                        <span>
+                            <i class="fas fa-check"></i>07:10<br>
+                        </span>
+                    </div> 
+                </li>
+
+                <li> 
+                    <div class="contacts__profile status--online">
+                        <img src="img/avataaars4.png" alt="Avatars">
+                    </div>
+                    <div class="contact__message">
+                        <h2>Mario Casas</h2>
+                        <p> Lorem ipsum dolor sit amet.</p>
+                    </div>
+                    <div class="messages_sent">
+                        <span>
+                            <i class="fas fa-check"></i>08:20<br>
+                        </span>
+                    </div> 
+                </li>
+
+                <li> 
+                    <div class="contacts__profile status--online">
+                        <img src="img/avataaars1.png" alt="Avatars">
+                    </div>
+                    <div class="contact__message">
+                        <h2>Michaela Lonel</h2>
+                        <p> Lorem ipsum dolor sit amet.</p>
+                    </div>
+                    <div class="messages_sent">
+                        <span>
+                            <i class="fas fa-check"></i>15:10<br>
+                        </span>
+                    </div> 
+                </li>
+
+                <li> 
+                    <div class="contacts__profile status--offline">
+                        <img src="img/avataaars3.png" alt="Avatars">
+                    </div>
+                    <div class="contact__message">
+                        <h2>Magdalena Mora</h2>
+                        <p> Lorem ipsum dolor sit amet.</p>
+                    </div>
+                    <div class="messages_sent">
+                        <span>
+                            <i class="fas fa-check"></i> 15:30<br>
+                        </span>
+                    </div> 
+                </li>
+                <li> 
+                    <div class="contacts__profile status--offline">
+                        <img src="img/avataaars2.png" alt="Avatars">
+                    </div>
+                    <div class="contact__message">
+                        <h2>Afanasie Tower</h2>
+                        <p> Lorem ipsum dolor sit amet.</p>
+                    </div>
+                    <div class="messages_sent">
+                        <span>
+                            <i class="fas fa-check"></i> 14:30<br>
+                        </span>
+                    </div> 
+                    </li>
+
+                    <li> 
+                        <div class="contacts__profile status--online">
+                            <img src="img/avataaars1.png" alt="Avatars">
+                        </div>
+                        <div class="contact__message">
+                            <h2>Magda IKsa</h2>
+                            <p> Lorem ipsum dolor sit amet.</p>
+                        </div>
+                        <div class="messages_sent status--online">
+                            <span>
+                                <i class="fas fa-check"></i>15:10<br>
+                            </span>
+                        </div> 
+                    </li>
+
+                    <li> 
+                        <div class="contacts__profile status--online">
+                            <img src="img/avataaars3.png" alt="Avatars">
+                        </div>
+                        <div class="contact__message">
+                            <h2>Lily Sano</h2>
+                            <p> Lorem ipsum dolor sit amet.</p>
+                        </div>
+                        <div class="messages_sent">
+                            <span>
+                                <i class="fas fa-check"></i>15:41<br>
+                            </span>
+                        </div> 
+                    </li>
+
+                    <li> 
+                        <div class="contacts__profile status--offline">
+                            <img src="img/avatar.png" alt="Avatars">
+                        </div>
+                        <div class="contact__message">
+                            <h2>Martin Shrp</h2>
+                            <p> Lorem ipsum dolor sit amet.</p>
+                        </div>
+                        <div class="messages_sent">
+                            <span>
+                                <i class="fas fa-check"></i> 15:30<br>
+                            </span>   
+                        </div>  
+                        
+                    </li> 
+                </ul>
+            </main>
+            <footer></footer>
+        </section> 
+    <!--</div>-->
+</body>
+</html>

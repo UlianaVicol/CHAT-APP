@@ -1,0 +1,203 @@
+/* Mod de afisare l-am setat ca display:inline-block, am folosit div la toate elementele fiindca ma ajuta mai usor sa gestionez cu structura.*/
+body{
+    margin: 0;
+    background-color: #333;
+    font-family: sans-serif;
+}
+
+ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+h2,p{
+    margin: 0;  
+}
+.phone{
+    background-color:  #555;
+    width: 80%;
+    height: 90%;
+    
+    position: absolute;
+    margin: auto;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+span{
+    color: rgb(116, 116, 116);
+}
+
+
+/* Chat app style*/
+.app{
+    width: 100vw;
+    height: 100vh;
+    background-color: #777;  
+}
+.app header,
+.app footer{
+	background-image: -webkit-radial-gradient(left, circle cover, #313d4a 10%, #505050 80%);
+    height: 8%;
+}
+.app main{
+    background-color:  #f7f7f7;
+    height: 84%;
+    overflow-y: scroll;
+}
+.contacts{
+    position: relative;
+}
+
+.contacts li{
+    border-bottom: 0.1em solid  #AAA;
+    padding: 0.5em;
+}
+img{
+    height: 3em;
+}
+.contacts div{
+    font-size: 12px;
+    margin: 5px;
+    color: rgb(78, 78, 78);
+    display: inline-block;
+}
+.contacts .contacts__profile{
+    position: relative;
+    border-radius: 100%;
+    width: 5em;
+    height: 5em;
+}
+.contacts__profile::before {
+    content: "";
+    display: block;
+    height: 0.6em;
+    width: 0.6em;
+    position: absolute;
+    border-radius: 100%;
+    top: 0.24em;
+    left: 0.24em;
+    z-index: 1;
+}
+.status-time{
+    position: absolute;
+    background-color: yellowgreen;
+    display: block;
+    padding: 0 2px;
+    border-radius: 100%;
+    border: 2px solid white;
+    top: 2em;
+    left: 1.1em;
+    z-index: 1;
+}
+.status--online::before {
+  background-color: green; 
+  border: 0.2em  solid rgb(233, 232, 232);
+}
+.status--offline::before{
+    background-color: rgb(160, 160, 160); 
+    border: 0.2em  solid rgb(233, 232, 232);
+}
+.status--recently-active::before {
+    background-color: lightgreen; 
+    border: 0.2em  solid rgb(233, 232, 232);
+}
+  .status--out{
+    background-color: none; 
+    border: none;
+}
+  .message_read .fas{
+    color: rgb(7, 161, 250);
+    display: inline-block;         /*message read */
+    font-size: 12px;
+    margin: 0 10px;
+}
+.message-unread .fas{   
+    color: rgb(107, 107, 107);
+    display: inline-block;         /*mesaj ne-citit s-au care nu a fost primit*/
+    font-size: 12px;
+    margin: 0 5px;
+}
+.message_sent .fas{   
+    color: rgb(44, 44, 44);
+    display: inline-block;         /*mesaj trimis*/
+    font-size: 12px;
+    margin: 0 5px;
+}
+.contacts .contact__message{
+    position: absolute;
+    margin-left: 0.75em;
+}
+.contacts .messages_sent{
+    position: absolute;
+    right: 5px;
+    margin-right: 0.5em;
+    font-size: 12px;
+    color: #AAA;
+} 
+/*  Landscape version*/
+@media (orientation: landscape) and (min-width:1000px){
+    .contact div{
+        font-size: 20px;
+    }
+    .contact div{
+        font-size: 10px;
+    }
+}
+@media (orientation: portrait){
+    
+    .contacts .messages_sent{
+        margin-right: 0.5em;
+    }
+    .contacts .contacts__profile{
+        margin-left: 2em!important;
+    }
+    .contacts .name__profile__message{
+        margin-left: 0.2em;
+    }
+    .status-time{
+        left: 1.5em;    
+    }
+}
+@media (orientation: landscape){
+    .contacts .messages_sent{
+        margin-right: 3em;
+    }
+    .contacts .contacts__profile{
+        margin-left: 3em!important;
+    }
+    .contacts .name__profile__message{
+        margin-left: 3em!important;
+    }
+    .status-time{
+        left: 1.5em;   
+    }
+}
+
+/*H2: vh ->portret:exactly 7 contacts*/
+ @media  (orientation: portrait) and (min-height:600px){
+    .app .contacts__profile {
+        height: 10.6vh;
+        margin: 0.6vh;
+    }
+    .contacts li{
+        padding: 0;
+    }
+  }
+  /*H2: vh ->landscape:exactly 3 contacts*/
+@media (orientation: landscape) and (min-height:300px){
+
+    .contacts .contacts__profile {
+        height: 25vh;
+    }
+    .contacts li{
+        padding: 0.9vh;
+    }
+}
+
+
+
+
+
+
